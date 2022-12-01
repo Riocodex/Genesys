@@ -15,9 +15,11 @@ let userNum ="";
 
 //Here i initialize user details
 let userDetails = {Username:userName , Email:userEmail, Balance: 1000000000000000000000}
-//here i initializ the items that will be displayed and can be bought in the shop
+//here i initialize the items that will be displayed and can be bought in the shop
 let listItems = {Spoon:20, Laptop: 500000, Table: 1000, House: 10000000, Glasses:100, Babe:20000000, Car:200000, Phone:200};
 
+//here i initalized an array that stores the items bought by the user
+let boughtItems=[]
 
 
 //used arrow functions and promise because nested codes and callbacks are terrible to read and maintain..wouldnt want to stress you😉
@@ -47,6 +49,7 @@ const question2 = () => {
 const question3 = () => {
   return new Promise((resolve, reject) => {
     rl.question('What would you like to buy? ', (answer) => {
+      console.log("price of what you bought",listItems.answer)
         
       console.log(`Thank you for your valuable feedback: ${userEmail}`)
       resolve()
@@ -81,6 +84,7 @@ const main = async () => {
   //here i display the list of things in the app for the user to buy..not quite much tho😅
   console.log("Here are the items on list today")
   console.table(listItems)
+  await question3()
 
 
    /////////BUYING THINGS///////////////////
