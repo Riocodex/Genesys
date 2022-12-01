@@ -11,6 +11,13 @@ const rl = readline.createInterface({
 //i initialized empty user inputs ..will add values to them soon
 let userName ="";
 let userEmail ="";
+let userNum ="";
+
+//Here i initialize user details
+let userDetails = {Username:userName , Email:userEmail, Balance: 1000000000000000000000}
+//here i initializ the items that will be displayed and can be bought in the shop
+let listItems = {Spoon:20, Laptop: 500000, Table: 1000, House: 10000000, Glasses:100, Babe:20000000, Car:200000, Phone:200};
+
 
 
 //used arrow functions and promise because nested codes and callbacks are terrible to read and maintain..wouldnt want to stress you😉
@@ -31,6 +38,16 @@ const question2 = () => {
   return new Promise((resolve, reject) => {
     rl.question('q2 What is your email? ', (answer) => {
         userEmail = answer;
+      console.log(`Thank you for your valuable feedback: ${userEmail}`)
+      resolve()
+    })
+  })
+}
+
+const question3 = () => {
+  return new Promise((resolve, reject) => {
+    rl.question('What would you like to buy? ', (answer) => {
+        
       console.log(`Thank you for your valuable feedback: ${userEmail}`)
       resolve()
     })
@@ -60,16 +77,14 @@ const main = async () => {
   
   //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
   console.log("Here is your data")
-  let userDetails = {Username:userName , Email:userEmail, Balance: 1000000000000000000000}
   console.table(userDetails)
   //here i display the list of things in the app for the user to buy..not quite much tho😅
-  let listItems = {Spoon:20, Laptop: 500000, Table: 1000, House: 10000000, Glasses:100, Babe:20000000, Car:200000, Phone:200};
   console.log("Here are the items on list today")
   console.table(listItems)
 
 
    /////////BUYING THINGS///////////////////
-   
+
 
   rl.close()
 
