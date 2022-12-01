@@ -60,14 +60,19 @@ const main = async () => {
   
   //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
   console.log("Here is your data")
-  console.table({Username:userName , Email:userEmail, Balance: 1000000000000000000000})
+  let userDetails = {Username:userName , Email:userEmail, Balance: 1000000000000000000000}
+  console.table(userDetails)
   //here i display the list of things in the app for the user to buy..not quite much tho😅
   let listItems = {Spoon:20, Laptop: 500000, Table: 1000, House: 10000000, Glasses:100, Babe:20000000, Car:200000, Phone:200};
   console.log("Here are the items on list today")
   console.table(listItems)
+
+  
   rl.close()
 
+
   /////////BUYING THINGS///////////////////
+
 
 }
 
