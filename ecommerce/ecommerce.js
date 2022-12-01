@@ -67,11 +67,14 @@ const main = async () => {
   console.log("Here are the items on list today")
   console.table(listItems)
 
-  
+
+   /////////BUYING THINGS///////////////////
+   
+
   rl.close()
 
 
-  /////////BUYING THINGS///////////////////
+ 
 
 
 }
