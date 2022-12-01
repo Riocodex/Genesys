@@ -14,9 +14,8 @@ let userEmail ="";
 let userNum ="";
 
 //Here i initialize user details
-let userDetails = {Username:userName , Email:userEmail, Balance: 1000000000000000000000}
 //here i initialize the items that will be displayed and can be bought in the shop
-let listItems = {Spoon:20, Laptop: 500000, Table: 1000, House: 10000000, Glasses:100, Babe:20000000, Car:200000, Phone:200};
+let listItems = {spoon:20, laptop: 5000, table: 1000, house: 1000, glasses:100, babe:200, car:20000, phone:200};
 
 //here i initalized an array that stores the items bought by the user
 let boughtItems=[]
@@ -46,12 +45,17 @@ const question2 = () => {
   })
 }
 
+let balance = 10000000000;
 const question3 = () => {
   return new Promise((resolve, reject) => {
-    rl.question('What would you like to buy? ', (answer) => {
-      console.log("price of what you bought",listItems.answer)
+    rl.question('What would you like to buy?\nPlease type in words what youd like to buy eg Spoon ', (answer) => {
+      
+      console.log("price of what you bought",listItems[answer])
+      balance = balance - listItems[answer];
+      console.log("current Balance : ",balance)
+      boughtItems.push(answer);
         
-      console.log(`Thank you for your valuable feedback: ${userEmail}`)
+      console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
       resolve()
     })
   })
@@ -80,6 +84,7 @@ const main = async () => {
   
   //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
   console.log("Here is your data")
+  let userDetails = {Username:userName , Email:userEmail, Balance: balance}
   console.table(userDetails)
   //here i display the list of things in the app for the user to buy..not quite much tho😅
   console.log("Here are the items on list today")

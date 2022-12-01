@@ -8,5 +8,7 @@ display
     what they buy is added to an array of things they bought
 2)users can sell :
     they can sell the items in the array..ie items they bought
+    1)when selling there will be a settimeout function of random numbers to     
+    delay when an item is being sold
     they can play a game when they dont have money nor dont want to sell 
     any item
