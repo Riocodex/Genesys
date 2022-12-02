@@ -93,13 +93,13 @@ const main = async () => {
           
           
           
-           if(answer != "end program"){
-              if(!listItems[answer]){
-                console.log("the item you listed is not available at the moment please try again")
-                question3()
+           if(answer == "end program"){
+              console.log("You have successfully exited the program\nHope you enjoyed :)")
+            return;
+           }
+           else{
             
-              }
-                              //showing the user the price of what he picked
+                         //showing the user the price of what he picked
            console.log("price of what you bought",listItems[answer])
            //removing the value of what the user bought from the balance
            balance = balance - listItems[answer];
@@ -110,10 +110,6 @@ const main = async () => {
            console.log("You now have")
            console.table(boughtItems)
            question3()
-              
-           }
-           else{
-            return "Successfully left the program see you soon.... :)"
            }
          })
        
