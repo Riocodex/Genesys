@@ -45,8 +45,6 @@ const question2 = () => {
   })
 }
 
-let balance = 10000000000;//this is the balance we will be working with for buying stuff
-
 
 const main = async () => {
   //here we call the functions...that is questions
