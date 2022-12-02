@@ -46,35 +46,7 @@ const question2 = () => {
 }
 
 let balance = 10000000000;//this is the balance we will be working with for buying stuff
-const question3 = () => {
-  return new Promise((resolve, reject) => {
-    //made a condition here for the while loop
-    condition =false
-    
-      console.log("Here is your data")
-      let userDetails = {Username:userName , Email:userEmail, Balance: balance}
-      console.table(userDetails)
-      //here i display the list of things in the app for the user to buy..not quite much tho😅
-      console.log("Here are the items on list today")
-      console.table(listItems)
-      rl.question('What would you like to buy?\nPlease type in words what youd like to buy eg Spoon ', (answer) => {
-        //showing the user the price of what he picked
-        console.log("price of what you bought",listItems[answer])
-        //removing the value of what the user bought from the balance
-        balance = balance - listItems[answer];
-        console.log("current Balance : ",balance)
-        boughtItems.push(answer);
-          
-        console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
-        console.log("You now have")
-        console.table(boughtItems)
-        resolve()
-        return r1.close()
-        question3()
-      })
-    
-  })
-}
+
 
 const main = async () => {
   //here we call the functions...that is questions
@@ -99,17 +71,47 @@ const main = async () => {
   
   //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
  
-  await question3()
+  // await question3()
+
 
 
    /////////BUYING THINGS///////////////////
 
 
-  rl.close()
 
-
- 
-
+   let balance = 10000000000;//this is the balance we will be working with for buying stuff
+   const question3 = () => {
+     
+       //made a condition here for the while loop
+       
+       
+         
+         rl.question('What would you like to buy?\nIf you wish to leave the program, type "escape program"\nPlease type in words what youd like to buy eg Spoon ', (answer) => {
+          
+          
+          
+           if(answer != "end program"){
+             //showing the user the price of what he picked
+           console.log("price of what you bought",listItems[answer])
+           //removing the value of what the user bought from the balance
+           balance = balance - listItems[answer];
+           console.log("current Balance : ",balance)
+           boughtItems.push(answer);
+             
+           console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
+           console.log("You now have")
+           console.table(boughtItems)
+            question3()
+           }
+           else{
+            return "Successfully left the program see you soon.... :)"
+           }
+         })
+       
+     
+   }
+   question3()
+  
 
 }
 
