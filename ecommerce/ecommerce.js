@@ -56,7 +56,7 @@ const main = async () => {
   //here i made a cool welcome text and a cool tiger😼 to welcome users hopefully this makes the user smile 
   console.log(
     '\n' +
-    'Hi there, Welcome to Puma Ecommerce! Thanks for your patronage.\n' +
+    'Hi there , Welcome to Puma Ecommerce! Thanks for your patronage.\n' +
     'Puma Ecomerce is the first ever ecommerce app to run on terminal,\n' +
 
     'Built and founded by Onwuka Rosario,                    ("\`-’-/").___..--’’"\`-._\n' +
@@ -83,7 +83,12 @@ const main = async () => {
    const question3 = () => {
      
        //made a condition here for the while loop
-       
+       console.log("Here is your data")
+       let userDetails = {Username:userName , Email:userEmail, Balance: balance}
+       console.table(userDetails)
+       //here i display the list of things in the app for the user to buy..not quite much tho😅
+       console.log("Here are the items on list today")
+       console.table(listItems)
        
          
          rl.question('What would you like to buy?\nIf you wish to leave the program, type "escape program"\nPlease type in words what youd like to buy eg Spoon ', (answer) => {
@@ -91,7 +96,12 @@ const main = async () => {
           
           
            if(answer != "end program"){
-             //showing the user the price of what he picked
+              if(!listItems[answer]){
+                console.log("the item you listed is not available at the moment please try again")
+                question3()
+            
+              }
+                              //showing the user the price of what he picked
            console.log("price of what you bought",listItems[answer])
            //removing the value of what the user bought from the balance
            balance = balance - listItems[answer];
@@ -101,7 +111,8 @@ const main = async () => {
            console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
            console.log("You now have")
            console.table(boughtItems)
-            question3()
+           question3()
+              
            }
            else{
             return "Successfully left the program see you soon.... :)"
