@@ -22,6 +22,9 @@ let boughtItems=[]
 
 
 //used arrow functions and promise because nested codes and callbacks are terrible to read and maintain..wouldnt want to stress you😉
+
+//notice the settimeout functions? its to slow down the app so it wont 
+//display a lotta junk at once...its a ui display feature 🙃
 const question1 = () => {
   return new Promise((resolve, reject) => {
     // for a readline the 2parameters are 1) a string usually in form of a question or anything  that will prompt the user to put an input
@@ -110,8 +113,7 @@ const main = async () => {
            else{
             console.log("processing.................")
                          //showing the user the price of what he picked
-                         //notice the settimeout functions? its to slow down the app so it wont 
-                         //display a lotta junk at once...its a ui display feature 🙃
+                         
           setTimeout(() => {
             console.log("price of what you bought",listItems[answer])
           }, 2000);
