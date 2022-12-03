@@ -108,28 +108,30 @@ const main = async () => {
             return;
            }
            else{
-            
+            console.log("processing.................")
                          //showing the user the price of what he picked
+                         //notice the settimeout functions? its to slow down the app so it wont 
+                         //display a lotta junk at once...its a ui display feature 🙃
           setTimeout(() => {
             console.log("price of what you bought",listItems[answer])
-          }, 1000);
+          }, 2000);
            //removing the value of what the user bought from the balance
            balance = balance - listItems[answer];
            setTimeout(() => {
             console.log("current Balance : ",balance)
-           }, 3000);
+           }, 4000);
            boughtItems.push(answer);
              
          setTimeout(() => {
-          console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
+          console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot ;)`)
           console.log("You now have")
           console.table(boughtItems)
           console.log("Going Back to Home page......")
-         }, 5000);
+         }, 6000);
 
            setTimeout(() => {
             question3()
-           }, 7000);
+           }, 10000);
            //this is the function and yes i am calling it again its called recursion , for some 
            //reason loops dont really work with readline..weird right? anyways i still got the 
            //job done😎 Calling this function will make the program start over and over when a user 
