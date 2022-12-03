@@ -44,6 +44,7 @@ const question2 = () => {
     rl.question('What is your email? ', (answer) => {
         userEmail = answer;
       console.log(`Thank you for your valuable feedback: ${userEmail}`)
+      console.log("going to the home page.................")
       resolve()
     })
   })
@@ -92,14 +93,17 @@ const main = async () => {
         
        
        //here i display the list of things in the app for the user to buy..not quite much tho😅
-       console.log("Here are the items on list today")
-       console.table(listItems)
+       setTimeout(() => {
+        console.log("Here are the items on list today")
+        console.table(listItems)
+       }, 3000);
        
          //here i ask the user if he wishes to leave the program, or proceed with it
          //my program is case sensitive , so i specified how users will type an item they need else 
          //else the code wont run, type any item just make sure its in the list and with the same
          //case example, babe , spoon etc...
-         rl.question('What would you like to buy?\nIf you wish to leave the program, type "end program"\nPlease type in words what youd like to buy eg spoon ', (answer) => {
+       setTimeout(() => {
+        rl.question('What would you like to buy?\nIf you wish to leave the program, type "end program"\nPlease type in words what youd like to buy eg spoon ', (answer) => {
           
           //here i create code that should run depending on what the user inputs
           
@@ -140,6 +144,7 @@ const main = async () => {
            //is done buying items , only if the user doesnt end the program of course
            }
          })
+       }, 4000);
        
      
    }
@@ -147,7 +152,9 @@ const main = async () => {
     //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
    console.log("Here is your data")
    let userDetails = {Username:userName , Email:userEmail, Balance: balance}
-       console.table(userDetails)
+       setTimeout(() => {
+        console.table(userDetails)
+       }, 1000);
   //calling the function
    question3()
   
