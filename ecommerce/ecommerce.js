@@ -85,10 +85,9 @@ const main = async () => {
    const question3 = () => {
      
        //made a condition here for the while loop
-       console.log("Here is your data")
-         //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
-       let userDetails = {Username:userName , Email:userEmail, Balance: balance}
-       console.table(userDetails)
+       
+        
+       
        //here i display the list of things in the app for the user to buy..not quite much tho😅
        console.log("Here are the items on list today")
        console.table(listItems)
@@ -111,18 +110,26 @@ const main = async () => {
            else{
             
                          //showing the user the price of what he picked
-           console.log("price of what you bought",listItems[answer])
+          setTimeout(() => {
+            console.log("price of what you bought",listItems[answer])
+          }, 1000);
            //removing the value of what the user bought from the balance
            balance = balance - listItems[answer];
-           console.log("current Balance : ",balance)
+           setTimeout(() => {
+            console.log("current Balance : ",balance)
+           }, 3000);
            boughtItems.push(answer);
              
-           console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
-           console.log("You now have")
-           console.table(boughtItems)
+         setTimeout(() => {
+          console.log(`Thank you ${userName} for purchasing ${answer}, it has been added to your loot😉`)
+          console.log("You now have")
+          console.table(boughtItems)
+          console.log("Going Back to Home page......")
+         }, 5000);
+
            setTimeout(() => {
             question3()
-           }, 5000);
+           }, 7000);
            //this is the function and yes i am calling it again its called recursion , for some 
            //reason loops dont really work with readline..weird right? anyways i still got the 
            //job done😎 Calling this function will make the program start over and over when a user 
@@ -132,7 +139,12 @@ const main = async () => {
        
      
    }
-   //calling the function
+  
+    //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
+   console.log("Here is your data")
+   let userDetails = {Username:userName , Email:userEmail, Balance: balance}
+       console.table(userDetails)
+  //calling the function
    question3()
   
 
