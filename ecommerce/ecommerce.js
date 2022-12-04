@@ -88,10 +88,14 @@ const main = async () => {
    let balance = 10000000000;//this is the balance we will be working with for buying stuff
    const question3 = () => {
      
-       //made a condition here for the while loop
        
-        
        
+     //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
+     console.log("Here is your data")
+     let userDetails = {Username:userName , Email:userEmail, Balance: balance}
+         setTimeout(() => {
+          console.table(userDetails)
+         }, 1000);
        //here i display the list of things in the app for the user to buy..not quite much tho😅
        setTimeout(() => {
         console.log("Here are the items on list today")
@@ -137,7 +141,7 @@ const main = async () => {
 
            setTimeout(() => {
             question3()
-           }, 10000);
+           }, 8000);
            //this is the function and yes i am calling it again its called recursion , for some 
            //reason loops dont really work with readline..weird right? anyways i still got the 
            //job done😎 Calling this function will make the program start over and over when a user 
@@ -149,12 +153,7 @@ const main = async () => {
      
    }
   
-    //here i display the user data in a more elegant way using console.table , i gave the users a default balance to buy stuff they want .
-   console.log("Here is your data")
-   let userDetails = {Username:userName , Email:userEmail, Balance: balance}
-       setTimeout(() => {
-        console.table(userDetails)
-       }, 1000);
+
   //calling the function
    question3()
   
