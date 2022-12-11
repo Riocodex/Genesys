@@ -1,5 +1,5 @@
 
-sir i know you said we should submit one link and do the two assignments there but,  i cant because when i try to i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
+sir i know you said we should submit one link and do the two assignments there but,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
 
 ## ARTICLE FOR PREFERRED UML TOOL
 [LINK TO ARTICLE](https://docs.google.com/document/d/1EVVoV8EufcyypPEQLReUq8dhmKDm8Ys7OZkglgiGPPM/edit?usp=sharing)
