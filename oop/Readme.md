@@ -1,8 +1,6 @@
 
 sir i know you said we should submit one link and do the two assignments there but,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
 
-## ARTICLE FOR PREFERRED UML TOOL
-[LINK TO ARTICLE](https://docs.google.com/document/d/1EVVoV8EufcyypPEQLReUq8dhmKDm8Ys7OZkglgiGPPM/edit?usp=sharing)
 
 ## USE CASE DIAGRAM FOR LMS
 [LINK TO USE CASE DIAGRAM LMS](https://lucid.app/lucidchart/85d72397-bf1f-4fcf-9881-82e7b25d2a0d/edit?viewport_loc=-11%2C791%2C1480%2C700%2C0_0&invitationId=inv_32c790cd-b9a6-4ae8-87e0-31e40d54ab40)
