@@ -1,5 +1,6 @@
 
-sir i know you said we should submit one link and do the two assignments there but,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
+Due to technical difficulties i cant o both diagrams in one page,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
+
 
 
 ## USE CASE DIAGRAM FOR LMS
