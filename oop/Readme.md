@@ -1,5 +1,5 @@
 
-Due to technical difficulties i cant o both diagrams in one page,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
+Due to technical difficulties i cant open both diagrams in one page,  i cant because when i try to, i exceed the free limits of lucid, i sincerely hope you accept my apology as i dont know what to do..here are the links:
 
 
 
