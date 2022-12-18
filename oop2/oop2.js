@@ -8,13 +8,13 @@ class AnimalProperties {//class of animals without backbone
     }
     //applying encapsulation
     #backbone(){
-        console.log("i  have a backbone")
+        console.log("has a backbone")
     }
     backboneCheck(){
         this.#backbone()
     }
     #coldBlooded(){
-        console.log("I am cold blooded")
+        console.log("is cold blooded")
     }
     coldBloodedCheck(){
         this.#coldBlooded()
@@ -28,8 +28,8 @@ class AnimalProperties {//class of animals without backbone
 
 class Aves extends AnimalProperties{//applied inheritance
     //applying polymorphism
-    coldBlooded(){
-        console.log("I am warm blooded")
+    coldBloodedCheck(){
+        console.log("is warm blooded")
     }
 }
 
@@ -46,15 +46,47 @@ class Reptiles extends AnimalProperties{
 }
 
 class Anthropoda extends AnimalProperties{
-    backbone(){
-        console.log("I dont have a backbone")
+    backboneCheck(){
+        console.log("doesnt have a backbone")
     }
 }
 
 class Mammals extends AnimalProperties{
-    coldBlooded(){
-        console.log("I am warm blooded")
+    coldBloodedCheck(){
+        console.log("is warm blooded")
     }
 }
+
+//instantiating the classes
+var hawk = new Aves()
+console.log("------------HAWK-----------")
+console.log(hawk.coldBloodedCheck())
+console.log(hawk.backboneCheck())
+
+var butterfly = new Anthropoda()
+console.log("------------BUTTERFLY---------")
+console.log(butterfly.coldBloodedCheck())
+console.log(butterfly.backboneCheck())
+
+var shark = new Fish()
+console.log("------------SHARK-------------")
+console.log(shark.coldBloodedCheck())
+console.log(shark.backboneCheck())
+
+var frog = new Amphibia()
+console.log("------------FROG-----------")
+console.log(frog.coldBloodedCheck())
+console.log(frog.backboneCheck())
+
+var turtle = new Reptiles()
+console.log("-------------TURTLE-----------")
+console.log(turtle.coldBloodedCheck())
+console.log(turtle.backboneCheck())
+
+var cat = new Mammals()
+console.log("-------------CAT-----------")
+console.log(cat.coldBloodedCheck())
+console.log(cat.backboneCheck())
+
 
 
