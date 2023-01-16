@@ -1,3 +1,5 @@
+## ONWUKA ROSARIO (W)
+
 In the HTML, I created a basic layout for the To-do list application. There is a heading, a form with an input field and a button, and an unordered list to display the tasks. The form is used to add new tasks to the list, and the input field is where the user will enter the task. The button is used to trigger the "addTask" function when clicked. The unordered list is where the tasks will be displayed. The CSS and JavaScript files are linked in the head of the HTML document.
 
 In the CSS, I styled the various elements of the To-do list application. I set the font family for the body, centered the heading and the form, styled the input field and button to look nice, styled the unordered list, and added some basic styling to the tasks when they are displayed in the list.
