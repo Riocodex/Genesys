@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
-//0xd01Ad005BCe1227226Bd6eD5041867258BE4cD19
+//contract deployed @ 0xd01Ad005BCe1227226Bd6eD5041867258BE4cD19
 
 contract Feedback {
     struct FeedbackMessage {
