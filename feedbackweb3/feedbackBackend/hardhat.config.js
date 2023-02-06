@@ -15,4 +15,5 @@ module.exports = {
       polygonMumbai: process.env.POLYGONSCAN_API_KEY
     }
   }
+}
 };
