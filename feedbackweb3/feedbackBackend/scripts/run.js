@@ -4,7 +4,7 @@ const main = async () => {
     await feedbackContract.deployed();
     console.log("Contract deployed to:", feedbackContract.address);
   
- 
+    let feedbackTxn = await
   };
   
   const runMain = async () => {

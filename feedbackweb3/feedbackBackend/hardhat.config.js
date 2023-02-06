@@ -9,11 +9,5 @@ module.exports = {
       url: process.env.GOERLI_URL,
       accounts: [process.env.PRIVATE_KEY],
     },
-   
-  etherscan: {
-    apiKey: {
-      polygonMumbai: process.env.POLYGONSCAN_API_KEY
-    }
-  }
 }
 };
