@@ -1,19 +1,16 @@
 const main = async () => {
-    const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
-    const nftContract = await nftContractFactory.deploy();
-    await nftContract.deployed();
-    console.log("Contract deployed to:", nftContract.address);
+    const FeedbackContract = await hre.ethers.getContractFactory('Feedback');
+    const feedbackContract = await FeedbackContract.deploy();
+    await feedbackContract.deployed();
+    console.log("Contract deployed to:", feedbackContract.address);
+
+    const money = {value: hre.ethers.utils.parseEther("10")};
+    //user accounts
+    const [owner, tipper, tipper2, tipper3 , tipper4 ] = await hre.ethers.getSigners();
+
+    
   
-    // Call the function.
-    let txn = await nftContract.makeAnEpicNFT()
-    // Wait for it to be mined.
-    await txn.wait()
-    console.log("Minted NFT #1")
-  
-    txn = await nftContract.makeAnEpicNFT()
-    // Wait for it to be mined.
-    await txn.wait()
-    console.log("Minted NFT #2")
+    let feedbackTxn = await feedbackContract.sendFeedback()
   };
   
   const runMain = async () => {
