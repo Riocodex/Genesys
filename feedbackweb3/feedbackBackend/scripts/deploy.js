@@ -10,17 +10,14 @@ const main = async () => {
 
     
   
-    await feedbackContract.connect(tipper).sendFeedback('excellent app bro');
-    await feedbackContract.connect(tipper2).sendFeedback('nice');
-    await feedbackContract.connect(tipper3).sendFeedback('tatakaye');
-    await feedbackContract.connect(tipper4).sendFeedback('bokuwa kira');
+    await feedbackContract.connect(tipper).sendFeedback('excellent app bro',"rio");
+    await feedbackContract.connect(tipper2).sendFeedback('nice',"david");
+    await feedbackContract.connect(tipper3).sendFeedback('tatakaye',"eren");
+    await feedbackContract.connect(tipper4).sendFeedback('bokuwa kira',"light");
 
     let feedbackArray = feedbackContract.feedbacks;
 
-    for (let i = 0; i < feedbackArray.length; i++) {
-        console.log(feedbackArray[i])
-    }
-    console.log("yo what")
+   console.log(feedbackArray)
   };
   
   const runMain = async () => {
