@@ -3,10 +3,6 @@ const main = async () => {
     const feedbackContract = await FeedbackContract.deploy();
     await feedbackContract.deployed();
     console.log("Contract deployed to:", feedbackContract.address);
-
-    
-  
-    let feedbackTxn = await feedbackContract.sendFeedback()
   };
   
   const runMain = async () => {

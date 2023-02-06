@@ -17,6 +17,11 @@ const main = async () => {
 
     let feedbackArray = await feedbackContract.returnFeedbacks();
 
+    await feedbackContract.connect(tipper).payMeEth(money);
+    await feedbackContract.connect(tipper2).payMeEth(money);
+    await feedbackContract.connect(tipper3).payMeEth(money);
+    await feedbackContract.connect(tipper4).payMeEth(money);
+
     for (let i = 0; i < feedbackArray.length; i++) {
         console.log(feedbackArray[i])
     }
