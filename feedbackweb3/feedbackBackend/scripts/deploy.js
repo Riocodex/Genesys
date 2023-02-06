@@ -15,9 +15,12 @@ const main = async () => {
     await feedbackContract.connect(tipper3).sendFeedback('tatakaye',"eren");
     await feedbackContract.connect(tipper4).sendFeedback('bokuwa kira',"light");
 
-    let feedbackArray = feedbackContract.feedbacks;
+    let feedbackArray = await feedbackContract.returnFeedbacks();
 
-   console.log(feedbackArray)
+    for (let i = 0; i < feedbackArray.length; i++) {
+        console.log(feedbackArray[i])
+    }
+    console.log("yo what")
   };
   
   const runMain = async () => {
