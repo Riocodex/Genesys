@@ -10,7 +10,10 @@ const main = async () => {
 
     
   
-    let feedbackTxn = await feedbackContract.sendFeedback()
+    await feedbackContract.connect(tipper).sendFeedback('excellent app bro',"rio");
+    await feedbackContract.connect(tipper2).sendFeedback('nice',"david");
+    await feedbackContract.connect(tipper3).sendFeedback('tatakaye',"eren");
+    await feedbackContract.connect(tipper4).sendFeedback('bokuwa kira',"light");
   };
   
   const runMain = async () => {
