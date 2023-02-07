@@ -12,7 +12,26 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <h1 className='text-3xl font-bold underline'>Feedbacks Received</h1>
+
+     <div className="flex items-center  justify-center ">
+     <form className = "bg-blue-400 shadow-md w-1/2 mt-5 rounded px-8 pt-6 pb-8 mb-4">
+      <h1 className = "mt-20 text-3xl font-bold"></h1>
+      <div class="mb-4">
+      <label class="block text-white text-sm font-bold mb-2" for="username">
+        name
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name"/>
+    </div>
+    <div class="mb-4">
+      <label class="block text-white text-sm font-bold mb-2" for="username">
+       message
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="feedback"/>
+    </div>
+      </form>
+     </div>
+
+      <h1 className='mt-20 text-3xl font-bold underline'>Feedbacks Received</h1>
       <div className='flex items-center  justify-center my-10 '>
        <div className='border-2 rounded-sm w-1/2'>
        <p className='text-xl font-bold'>"You worked to the end senior"</p>
