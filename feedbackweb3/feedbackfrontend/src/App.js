@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <Nav/>
 
-     <div className="flex items-center  justify-center ">
-     <form className = "bg-blue-400 shadow-md w-1/2 mt-5 rounded px-8 pt-6 pb-8 mb-4">
-      <h1 className = "mt-20 text-3xl font-bold">Write a Feedback</h1>
+     <div className="flex items-center justify-center ">
+     <form className = "bg-blue-400 shadow-md w-1/2 mt-5 rounded px-8 pt-6 pb-8 mb-2">
+      <h1 className = "text-3xl text-white font-bold mb-5 underline">Write a Feedback</h1>
       <div class="mb-4">
         
       <label class="block text-white text-sm font-bold mb-2" for="username">
