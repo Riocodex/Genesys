@@ -2,9 +2,12 @@ import logo from './logo.svg';
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import './App.css';
+import rio from './rio.png';
 import Nav from './components/Nav';
 import feedbackAbi from "./utils/feedbackabi.json"
 {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
+
 
 
 
