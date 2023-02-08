@@ -18,6 +18,14 @@ function App() {
   const [message, setMessage] = useState("");
   const [memos, setMemos] = useState([]);
   
+  const onNameChange = (event) => {
+    setName(event.target.value);
+  }
+
+  const onMessageChange = (event) => {
+    setMessage(event.target.value);
+  }
+
   return (
     <div className="App">
       <Nav/>
