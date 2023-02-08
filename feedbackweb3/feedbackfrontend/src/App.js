@@ -10,7 +10,11 @@ import feedbackAbi from "./utils/feedbackabi.json"
 const abi = feedbackAbi.abi;
 const contractAddress ="0xd01Ad005BCe1227226Bd6eD5041867258BE4cD19"
 
-
+// Component state
+const [currentAccount, setCurrentAccount] = useState("");
+const [name, setName] = useState("");
+const [message, setMessage] = useState("");
+const [memos, setMemos] = useState([]);
 
 function App() {
   return (
