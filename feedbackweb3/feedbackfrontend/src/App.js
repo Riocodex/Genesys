@@ -5,7 +5,9 @@ import feedbackAbi from "./utils/feedbackabi.json"
 {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
 
-let abi = feedbackAbi.abi;
+const abi = feedbackAbi.abi;
+const contractAddress ="0xd01Ad005BCe1227226Bd6eD5041867258BE4cD19"
+
 
 
 function App() {
