@@ -183,6 +183,7 @@ function App() {
     </div>
   </div>
 </nav>
+        <h1 className='mt-50'>......Waiting for metamask connection</h1>
         </div>
       )}
     
