@@ -23,7 +23,7 @@ function App() {
   
   const onNameChange = (event) => {
     setName(event.target.value);
-    console.log(name)
+   
   }
 
   const onMessageChange = (event) => {
