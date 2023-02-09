@@ -28,7 +28,7 @@ function App() {
 
   const onMessageChange = (event) => {
     setMessage(event.target.value);
-    console.log(message)
+   
   }
 
 
