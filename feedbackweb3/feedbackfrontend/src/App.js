@@ -142,13 +142,15 @@ function App() {
       <label class="block text-white text-sm font-bold mb-2" for="username">
         name
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name"/>
+      <input onChange={onNameChange}
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name"/>
     </div>
     <div class="mb-4">
       <label class="block text-white text-sm font-bold mb-2" for="username">
        message
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="feedback"/>
+      <input onChange={onMessageChange}
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="feedback"/>
     </div>
       </form>
      </div>
