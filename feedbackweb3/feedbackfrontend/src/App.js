@@ -106,6 +106,32 @@ function App() {
     }
   };
 
+   // Function to fetch all memos stored on-chain.
+   const getMemos = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const buyMeACoffee = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+        
+        console.log("fetching memos from the blockchain..");
+        const memos = await buyMeACoffee.getMemos();
+        console.log("fetched!");
+        setMemos(memos);
+      } else {
+        console.log("Metamask is not connected");
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
     
   useEffect(() => {
