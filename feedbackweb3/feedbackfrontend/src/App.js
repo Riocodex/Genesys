@@ -84,10 +84,10 @@ function App() {
           signer
         );
 
-        console.log("buying coffee..")
+        console.log("giving feedback")
         const coffeeTxn = await buyMeACoffee.buyCoffee(
-          name ? name : "anon",
-          message ? message : "Enjoy your coffee!",
+          name ? name : "Person",
+          message ? message : "marvelous app!",
           {value: ethers.utils.parseEther("0.001")}
         );
 
