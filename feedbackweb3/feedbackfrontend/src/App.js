@@ -85,15 +85,14 @@ function App() {
         );
 
         console.log("giving feedback")
-        const coffeeTxn = await buyMeACoffee.buyCoffee(
+        const feedbackTxn = await buyMeACoffee.buyCoffee(
           name ? name : "Person",
-          message ? message : "marvelous app!",
-          {value: ethers.utils.parseEther("0.001")}
+          message ? message : "marvelous app!"
         );
 
-        await coffeeTxn.wait();
+        await feedbackTxn.wait();
 
-        console.log("mined ", coffeeTxn.hash);
+        console.log("mined ", feedbackTxn.hash);
         console.log("this is the miner",signer)
 
         console.log("coffee purchased!");
