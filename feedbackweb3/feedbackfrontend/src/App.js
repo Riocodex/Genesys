@@ -78,14 +78,14 @@ function App() {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum, "any");
         const signer = provider.getSigner();
-        const buyMeACoffee = new ethers.Contract(
+        const feedbackContract = new ethers.Contract(
           contractAddress,
           contractABI,
           signer
         );
 
         console.log("giving feedback")
-        const feedbackTxn = await buyMeACoffee.buyCoffee(
+        const feedbackTxn = await feedbackContract.buyCoffee(
           name ? name : "Person",
           message ? message : "marvelous app!"
         );
@@ -106,8 +106,8 @@ function App() {
     }
   };
 
-   // Function to fetch all memos stored on-chain.
-   const getMemos = async () => {
+   // Function to fetch all feedbacks stored on-chain.
+   const getFeedbacks = async () => {
     try {
       const { ethereum } = window;
       if (ethereum) {
