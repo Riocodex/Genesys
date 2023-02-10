@@ -113,14 +113,14 @@ function App() {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const buyMeACoffee = new ethers.Contract(
+        const feedbackContract = new ethers.Contract(
           contractAddress,
           contractABI,
           signer
         );
         
         console.log("fetching memos from the blockchain..");
-        const memos = await buyMeACoffee.getMemos();
+        const memos = await feedbackContract.getMemos();
         console.log("fetched!");
         setMemos(memos);
       } else {
