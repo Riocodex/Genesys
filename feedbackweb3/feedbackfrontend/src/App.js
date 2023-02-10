@@ -85,9 +85,9 @@ function App() {
         );
 
         console.log("giving feedback")
-        const feedbackTxn = await feedbackContract.buyCoffee(
-          name ? name : "Person",
-          message ? message : "marvelous app!"
+        const feedbackTxn = await feedbackContract.sendFeedback(
+          message ? message : "marvelous app!",
+          name ? name : "Person"
         );
 
         await feedbackTxn.wait();
