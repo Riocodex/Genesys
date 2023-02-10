@@ -70,7 +70,68 @@ function App() {
   }
 
 
- 
+  //give feedback
+  const giveFeedback = async () => {
+    try {
+      const {ethereum} = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const signer = provider.getSigner();
+        const feedbackContract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
+        console.log("giving feedback")
+        const feedbackTxn = await feedbackContract.sendFeedback(
+          message ? message : "marvelous app!",
+          name ? name : "Person"
+        );
+
+        await feedbackTxn.wait();
+
+        console.log("feedback sent", feedbackTxn.hash);
+        console.log("this is the sender",signer)
+
+        console.log("feedbackSent");
+
+        // Clear the form fields.
+        setName("");
+        setMessage("");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+   // Function to fetch all feedbacks stored on-chain.
+   const getFeedbacks = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const feedbackContract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+        
+        console.log("fetching memos from the blockchain..");
+        const memos = await feedbackContract.returnFeedbacks();
+        console.log("fetched!");
+        setMemos(memos);
+        console.log(memos)
+      } else {
+        console.log("Metamask is not connected");
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 
     
