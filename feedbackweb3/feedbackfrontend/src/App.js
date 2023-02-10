@@ -92,10 +92,10 @@ function App() {
 
         await feedbackTxn.wait();
 
-        console.log("mined ", feedbackTxn.hash);
-        console.log("this is the miner",signer)
+        console.log("feedback sent", feedbackTxn.hash);
+        console.log("this is the sender",signer)
 
-        console.log("coffee purchased!");
+        console.log("feedbackSent");
 
         // Clear the form fields.
         setName("");
