@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import { ethers } from "ethers";
+import { ethers } from  "ethers"
 import React, { useEffect, useState } from "react";
 import './App.css';
 import rio from './rio.png';
@@ -76,7 +76,7 @@ function App() {
       const {ethereum} = window;
 
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum, "any");
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner();
         const feedbackContract = new ethers.Contract(
           contractAddress,
@@ -120,9 +120,10 @@ function App() {
         );
         
         console.log("fetching memos from the blockchain..");
-        const memos = await feedbackContract.getMemos();
+        const memos = await feedbackContract.returnFeedbacks();
         console.log("fetched!");
         setMemos(memos);
+        console.log(memos)
       } else {
         console.log("Metamask is not connected");
       }
