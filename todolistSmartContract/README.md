@@ -4,7 +4,15 @@ This smart contract is designed to implement a todo list, where users can create
 
 - Task struct is defined to keep track of each task. Each task has an ID, content, completion status, priority, and assignee address.
 
-- tasks and taskIndexes mappings are defined to keep track of the tasks by ID and taskIndexes respectively. tasks maps the ID of each task to its Task struct, and taskIndexes maps the ID of each task to its index in the list of incomplete tasks.
+- tasks and taskIndexes mappings are defined to keep track of the tasks by ID and taskIndexes respectively. tasks maps the ID of each task to its Task struct, and taskIndexes maps the ID of each task to its index in the list of incomplete tasks.The taskIndexes mapping in the TodoList smart contract is used to keep track of the position of each task in the list of incomplete tasks.
+
+When a new task is created, it is added to the tasks mapping, which maps the ID of each task to its Task struct. In addition to this, the ID of the new task is also added to the end of the list of incomplete tasks, and the position of the new task in the list is recorded in the taskIndexes mapping.
+
+This allows the smart contract to efficiently retrieve a list of incomplete tasks when requested by a user. When the getIncompleteTasks function is called, it retrieves the list of incomplete task IDs from the taskIndexes mapping, and then retrieves the corresponding Task structs from the tasks mapping.
+
+The taskIndexes mapping also gets updated when a task is completed or deleted. If a task is completed, its ID is removed from the list of incomplete tasks, and the position of each subsequent task in the list is updated in the taskIndexes mapping. If a task is deleted, its ID is removed from both the tasks and taskIndexes mappings.
+
+Overall, the taskIndexes mapping is used to keep track of the position of each task in the list of incomplete tasks, which allows the smart contract to efficiently retrieve a list of incomplete tasks when requested by a user.
 
 - TaskCreated, TaskCompleted, TaskDeleted and TaskUpdated events are defined to allow external clients to get notified of the state changes in the smart contract.
 
